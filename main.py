@@ -2,7 +2,7 @@ import requests
 import time
 
 current_version = "0.0.1"
-repo_name = "updateTestApp"
+repo_name = "updateAppTest"
 github_username = "cltWilly"
 
 # Get the latest release information from the GitHub API
