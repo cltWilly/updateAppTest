@@ -36,12 +36,12 @@ else:
             progress_bar.update(len(data))
             f.write(data)
     progress_bar.close()
-    with open("rename.bat", "w") as f:
+    with open("update.bat", "w") as f:
         f.write(f'@echo off\n'
                 f'taskkill /f /im main.exe\n'
                 f'del main.exe\n'
                 f'ren temp_main.exe main.exe\n'
                 f'start main.exe\n'
                 f'del "%~f0"')
-    subprocess.Popen(["rename.bat"])
+    subprocess.Popen(["update.bat"])
     sys.exit()
